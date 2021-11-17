@@ -80,6 +80,6 @@ namespace aesdemo {
      * Function will be executed when the user clicks on the "Encrypt" button.
      */
      void MainWindow::OnEncrypt() {
-        Crypto::encrypt((unsigned char *) "ABCABCABCABCABCAABCABCABCAB", (unsigned char *) "ABCABCABCABCABCA", "Informatiksystem");
+         Crypto::encrypt(Crypto::ModeOfOperation::ecb, (unsigned char *) "ABCABCABCABCABCAABCABCABCAB", "Informatiksystem");
     }
 }
