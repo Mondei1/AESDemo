@@ -3,9 +3,11 @@
 std::string aesdemo::Crypto::encrypt(ModeOfOperation mode, unsigned char *key, std::string input, unsigned char *iv) {
     struct AES_ctx ctx{};
 
-    auto buf = reinterpret_cast<uint8_t*>(&input);
+    auto buf = reinterpret_cast<uint8_t*>(input.data());
 
-    pkcs7_padding_pad_buffer(buf, input.size(), sizeof buf, 16);
+    std::cout << "Old content: " << buf << std::endl;
+
+    pkcs7_padding_pad_buffer(buf, input.size(), 0, 16);
 
     if (mode == ModeOfOperation::cbc) {
         if (iv == nullptr) {
@@ -26,7 +28,7 @@ std::string aesdemo::Crypto::encrypt(ModeOfOperation mode, unsigned char *key, s
 
     //int padAction = sodium_pad(&buf_padded_len, key, buf_unpadded_len, block_size, sizeof key);
 
-    std::cout << base64_encode(Utils::convertToString(reinterpret_cast<char *>(buf), sizeof(key))) << std::endl;
+    std::cout << base64_encode(input) << std::endl;
 
     return "worked";
 }

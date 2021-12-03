@@ -1,10 +1,8 @@
 add_library(libaesdemo libaesdemo/Crypto.cpp libaesdemo/Crypto.hpp libaesdemo/Utils.cpp libaesdemo/Utils.hpp libaesdemo/Base64.cpp libaesdemo/Base64.hpp)
 add_library(aesdemo::libaesdemo ALIAS libaesdemo)
 
-add_subdirectory(tinyAES)
-
 target_include_directories(libaesdemo PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>")
-target_link_libraries(libaesdemo PUBLIC PkgConfig::gtkmm tiny-aes)
+target_link_libraries(libaesdemo PUBLIC PkgConfig::gtkmm tinyAES::tinyAES tinyPKCS::tinyPKCS)
 target_compile_features(libaesdemo PUBLIC cxx_std_17)
 
 target_sources(libaesdemo PRIVATE

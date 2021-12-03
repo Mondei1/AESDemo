@@ -3,7 +3,7 @@
 #include <iomanip>
 #include "Utils.hpp"
 
-std::string aesdemo::Utils::stringToHex(char* input) {
+std::string aesdemo::Utils::stringToHex(const char* input) {
     std::stringstream hex;
 
     for (int i = 0; i < sizeof(input); i++) {
@@ -13,11 +13,6 @@ std::string aesdemo::Utils::stringToHex(char* input) {
     return hex.str();
 }
 
-std::string aesdemo::Utils::convertToString(char *a, int size) {
-    int i;
-    std::string s = "";
-    for (i = 0; i < size; i++) {
-        s = s + a[i];
-    }
-    return s;
+std::string aesdemo::Utils::convertToString(const char *a, int size) {
+    return std::string(a, size);
 }

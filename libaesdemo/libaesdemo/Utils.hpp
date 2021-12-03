@@ -3,7 +3,7 @@
 namespace aesdemo {
     class Utils {
     public:
-        static std::string stringToHex(char* input);
-        static std::string convertToString(char* a, int size);
+        static std::string stringToHex(const char* input);
+        static std::string convertToString(const char* a, int size);
     };
 }

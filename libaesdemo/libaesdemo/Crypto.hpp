@@ -1,10 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include "tinyAES/aes.hpp"
+#include <tinyaes/aes.hpp>
 
 extern "C" {
-    #include "tinyAES/pkcs7_padding.h"
+    #include <tinypkcs/pkcs7_padding.h>
 }
 
 #include "Base64.hpp"
