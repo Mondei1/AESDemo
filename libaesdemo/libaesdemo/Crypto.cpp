@@ -14,7 +14,6 @@ aesdemo::Crypto::Crypto(bool useKDF) {
     this->useKDF = useKDF;
 }
 
-
 std::string
 aesdemo::Crypto::Encrypt(ModeOfOperation mode, std::string key, const std::string &input, std::string iv) {
     CheckInput(key, iv, mode);
@@ -115,7 +114,6 @@ aesdemo::Crypto::Decrypt(ModeOfOperation mode, std::string key, const std::strin
 
 void aesdemo::Crypto::CheckInput(const std::string &key, const std::string &iv, ModeOfOperation mode) {
     if (!this->useKDF) {
-        std::cout << key.length() << std::endl;
         if (key.length() != 16 && key.length() != 24 && key.length() != 32) {
             throw CryptoPP::Exception(CryptoPP::Exception::INVALID_ARGUMENT,
                                       "Die Schlüssellänge darf, wenn KDF deaktiviert ist, nur exakt 16, 24 oder 32 Zeichen lang sein.");

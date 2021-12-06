@@ -1,4 +1,4 @@
-add_library(libaesdemo libaesdemo/Crypto.cpp libaesdemo/Crypto.hpp libaesdemo/Utils.cpp libaesdemo/Utils.hpp libaesdemo/Base64.cpp libaesdemo/Base64.hpp)
+add_library(libaesdemo libaesdemo/Crypto.cpp libaesdemo/Crypto.hpp libaesdemo/Utils.cpp libaesdemo/Utils.hpp)
 add_library(aesdemo::libaesdemo ALIAS libaesdemo)
 
 target_include_directories(libaesdemo PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>")

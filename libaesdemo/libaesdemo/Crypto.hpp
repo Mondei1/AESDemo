@@ -3,7 +3,6 @@
 #include <iostream>
 #include <cryptopp/secblock.h>
 
-#include "Base64.hpp"
 #include "Utils.hpp"
 
 namespace aesdemo {
