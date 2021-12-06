@@ -4,7 +4,7 @@
 Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die funktionsweise von AES.
 
 ## Bibliotheken
-* [tiny-AES-c](https://github.com/kokke/tiny-AES-c) - Eine kleine Bibliothek die, die AES implementiert.
+* [tiny-AES-c](https://github.com/kokke/tiny-AES-c) - Eine kleine Bibliothek die AES implementiert.
 * [bonybrown/tiny-AES128-C](https://github.com/bonybrown/tiny-AES128-C) - Ein Fork von tiny-AES-c woher die
 `pkcs7_padding.c` und `pkcs7_padding.h` stammen.
 
@@ -22,7 +22,8 @@ git clone https://github.com/Mondei1/AESDemo
 2. Wechsel in den neuen Ordner & generiere Makefile
 ```shell
 cd AESDemo
-cmake CMakeLists.txt
+mkdir build && cd build
+cmake ..
 ```
 
 3. Kompilieren
