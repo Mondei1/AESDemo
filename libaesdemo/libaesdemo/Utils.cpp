@@ -1,18 +1,21 @@
 #include <iostream>
 #include <ios>
-#include <iomanip>
+#include <random>
+#include <algorithm>
 #include "Utils.hpp"
 
-std::string aesdemo::Utils::stringToHex(const char* input) {
-    std::stringstream hex;
+std::string aesdemo::Utils::RandomString(std::size_t length) {
+    const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-    for (int i = 0; i < sizeof(input); i++) {
-        hex << std::hex << int(input[i]);
+    std::random_device random_device;
+    std::mt19937 generator(random_device());
+    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
+
+    std::string random_string;
+
+    for (std::size_t i = 0; i < length; ++i) {
+        random_string += CHARACTERS[distribution(generator)];
     }
 
-    return hex.str();
-}
-
-std::string aesdemo::Utils::convertToString(const char *a, int size) {
-    return std::string(a, size);
+    return random_string;
 }

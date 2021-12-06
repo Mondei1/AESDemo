@@ -4,9 +4,8 @@
 Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die funktionsweise von AES.
 
 ## Bibliotheken
-* [tiny-AES-c](https://github.com/kokke/tiny-AES-c) - Eine kleine Bibliothek die AES implementiert.
-* [bonybrown/tiny-AES128-C](https://github.com/bonybrown/tiny-AES128-C) - Ein Fork von tiny-AES-c woher die
-`pkcs7_padding.c` und `pkcs7_padding.h` stammen.
+* [Crypto++](https://cryptopp.com/) - Eine sehr umfassende Kryptografie Bibliothek. Von ihr verwende ich Funktionen
+um AES, KDF und Hex Operationen durchzuführen.
 
 ## Kompilieren
 Um dieses Programm auszuführen sind folgende Tools notwendig:
@@ -36,6 +35,15 @@ make
 ./AESDemo
 ```
 
+## Struktureller Aufbau
+| Pfad       	                            | Zweck 	|
+|------------	                            |---------	|
+|`aesdemo/aesdemo/main.cpp`                 | Beinhaltet die Hauptklasse, welche nur GTK initialisiert.
+|`libaesdemo/libaesdemo/`                   | Beinhaltet den eigentlichen Programmcode.
+|`libaesdemo/libaesdemo/Crypto.cpp`         | Ist ein kleiner Wrapper um Crypto++ um Operationen einfacher zu machen.
+|`libaesdemo/libaesdemo/MainWindows.cpp`    | Beinhaltet den GTK Code und regelt die Logik vom grafischen Fenster.
+|`libaesdemo/libaesdemo/Utils.cpp`          | Beinhaltet nur kleine Helferfunktionen.
+
 ## Entwicklungsumgebung
 Das Programm wurde unter folgenden Voraussetzungen programmiert und getestet:
 
@@ -46,5 +54,6 @@ Das Programm wurde unter folgenden Voraussetzungen programmiert und getestet:
 | `cmake`    	| 3.21.4  	|
 | `make`     	| 4.3     	|
 | `gtkmm`       | 4.0       | 
+| `crypto++`    | 8.5.0
 
 Ich habe keine Ahnung ob dieses Programm ohne weiteres auf Windows bauen und ausführen wird.
