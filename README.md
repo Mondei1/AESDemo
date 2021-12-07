@@ -1,7 +1,9 @@
 # AESDemo
-**— The following are instructions in german for by research paper about AES. —**
+**— The following are instructions in german for my research paper about the AES. —**
 
 Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die funktionsweise von AES.
+
+![Screenshot of AESDemo](https://github.com/Mondei1/AESDemo/tree/main/img/screenshot.png?raw=true)
 
 ## Bibliotheken
 * [Crypto++](https://cryptopp.com/) - Eine sehr umfassende Kryptografie Bibliothek. Von ihr verwende ich Funktionen
