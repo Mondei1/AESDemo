@@ -111,7 +111,7 @@ namespace aesdemo {
 
         mRawPassword.set_label("ohne KDF");
         mRawPassword.set_tooltip_text(
-                "Dies deaktiviert die Key Derivation Function (KDF). Es wird verwendet um das Passwort sicherer zu machen und in die von AES gewünschte Form zu bringen. Durch das deaktivieren wird das Passwort direkt verwendet und der Prozess wird schneller.");
+                "Dies deaktiviert die Key Derivation Function (KDF). Sie wird verwendet um das Passwort sicherer zu machen und in die von AES gewünschte Form zu bringen. Daher sind Variable Schlüssellängen möglich. Durch das deaktivieren wird das Passwort direkt verwendet und der Prozess wird schneller.");
         mRawPassword.set_halign(Gtk::Align::CENTER);
 
         mGrid.attach(mTitle, 0, 0, 2);
@@ -141,7 +141,7 @@ namespace aesdemo {
     }
 
     void MainWindow::OnRandomize() {
-        const char *plaintext[11] = {"Das ist eine zufällige Nachricht.",
+        const char *plaintext[15] = {"Das ist eine zufällige Nachricht.",
                                      "Was für eine Zufall nicht wahr?",
                                      "Manchmal frage ich mich ob das Zufall ist.",
                                      "Letztens war das echt zufällig.",
@@ -151,13 +151,17 @@ namespace aesdemo {
                                      "Wusstest du das ein Computer keinen echten Zufall erstellen kann?",
                                      "Zufallsrechnung in Mathe ist langweilig.",
                                      "Zufällig habe ich eine Nachricht geschrieben und zufällig an dich gesendet.",
-                                     "Vielleicht gewinne ich morgen per Zufall im Lotto."};
+                                     "Vielleicht gewinne ich morgen per Zufall im Lotto.",
+                                     "AES ist die am weitesten verbreitete Verschlüsselungsmethode.",
+                                     "Sogar die NSA verwendet AES um Top-Secret Akten zu verschlüsseln.",
+                                     "Früher waren in den USA alle Cipher, die eine Schlüssellänge von mehr als 56-Bit unterstützten, verboten.",
+                                     "Tools wie GPG nutzen ebenfalls AES um Daten symmetrisch zu verschlüsseln."};
         std::basic_string<char> iv = Utils::RandomString(16);
         std::string passphrase = Utils::RandomString(16);
 
         mPassphrase.set_text(passphrase);
         mIV.set_text(iv);
-        mInput.set_text(plaintext[rand() & 10]);
+        mInput.set_text(plaintext[rand() & 14]);
     }
 
     /**
@@ -213,7 +217,7 @@ namespace aesdemo {
             mIV.set_text("");
 
             mGrid.remove(mPassphrase);
-            mGrid.attach(mPassphrase, 0, 3, 2);
+            mGrid.attach(mPassphrase, 0, 4, 2);
         }
     }
 
