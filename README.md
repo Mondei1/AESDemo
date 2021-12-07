@@ -1,7 +1,7 @@
 <h1 align="center">AESDemo</h1>
 <p align="center">— The following are instructions in german for my research paper about the AES. —</p>
 
-Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die funktionsweise von AES.
+Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die Funktionsweise von AES.
 
 ![Screenshot of AESDemo](https://raw.githubusercontent.com/Mondei1/AESDemo/main/aesdemo/img/screenshot.png)
 
@@ -10,10 +10,11 @@ Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert di
 um AES, KDF und Hex Operationen durchzuführen.
 
 ## Kompilieren
-Um dieses Programm auszuführen sind folgende Tools notwendig:
+Um dieses Programm zu bauen und auszuführen sind folgende Tools notwendig:
 * G++
 * CMake
 * Make
+* Crypto++ (`pacman -S crypto++` oder `apt install libcrypto++8` | Für andere: [pkgs.org](https://pkgs.org/search/?q=crypto%2B%2B))
 
 1. Klonen des Repositories
 ```shell
