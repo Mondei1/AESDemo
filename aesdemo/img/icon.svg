@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 12.7 12.7"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="12.53809"
+     inkscape:cx="13.319413"
+     inkscape:cy="24.963929"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g6103" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient15155"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ffcc00;stop-opacity:1;"
+         offset="0"
+         id="stop15153" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13106">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop13102" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop13104" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient8031">
+      <stop
+         style="stop-color:#ffcc00;stop-opacity:1"
+         offset="0"
+         id="stop8027" />
+      <stop
+         style="stop-color:#f0d4ba;stop-opacity:1"
+         offset="1"
+         id="stop8029" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7985">
+      <stop
+         style="stop-color:#c8c98f;stop-opacity:1"
+         offset="0"
+         id="stop7981" />
+      <stop
+         style="stop-color:#ffcc31;stop-opacity:1"
+         offset="1"
+         id="stop7983" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7985"
+       id="linearGradient7987"
+       x1="12.013968"
+       y1="22.237474"
+       x2="12.143946"
+       y2="10.078348"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8031"
+       id="linearGradient8033"
+       x1="10.947467"
+       y1="13.828728"
+       x2="13.68418"
+       y2="18.210749"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8031"
+       id="linearGradient8041"
+       x1="13.000609"
+       y1="10.355604"
+       x2="8.117528"
+       y2="2.460068"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13106"
+       id="linearGradient13108"
+       x1="6.7693752"
+       y1="18.476267"
+       x2="17.230625"
+       y2="18.476267"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient15155"
+       id="linearGradient15157"
+       x1="6.7693752"
+       y1="18.476267"
+       x2="17.230625"
+       y2="18.476267"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="g27"
+       transform="scale(0.52916667)">
+      <path
+         stroke="none"
+         d="M 0,0 H 24 V 24 H 0 Z"
+         fill="none"
+         id="path9" />
+      <g
+         style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+         id="g6103">
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.0674;stroke-opacity:0"
+           id="path8217"
+           cx="12"
+           cy="12"
+           r="12" />
+        <path
+           stroke="none"
+           d="M 0,0 H 24 V 24 H 0 Z"
+           fill="none"
+           id="path6085" />
+        <g
+           id="g8655"
+           transform="matrix(0.6516022,0,0,0.6516022,4.1807735,1.0543025)">
+          <g
+             id="g8850"
+             transform="matrix(0.88136128,0,0,0.88136128,1.4236647,1.4236648)">
+            <rect
+               x="5"
+               y="11"
+               width="14"
+               height="10"
+               rx="2"
+               id="rect6087"
+               style="stroke:url(#linearGradient7987);stroke-opacity:1" />
+            <circle
+               cx="12"
+               cy="16"
+               id="circle6089"
+               r="1"
+               style="stroke:url(#linearGradient8033);stroke-opacity:1" />
+            <path
+               d="M 8,11 V 7 a 4,4 0 0 1 8,0 v 4"
+               id="path6091"
+               style="stroke:url(#linearGradient8041);stroke-opacity:1" />
+          </g>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:5.59126px;line-height:1.25;font-family:sans-serif;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.524179"
+           x="6.70228"
+           y="20.477938"
+           id="text10382"><tspan
+             sodipodi:role="line"
+             id="tspan10380"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.59126px;font-family:'Product Sans Black';-inkscape-font-specification:'Product Sans Black, ';stroke-width:0.524179;fill:#ffcc00;stroke:none;fill-opacity:1"
+             x="6.70228"
+             y="20.477938">AES</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

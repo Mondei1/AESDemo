@@ -14,7 +14,6 @@ endif()
 
 # Fetch dependencies
 find_package(PkgConfig)
-# pkg_check_modules(libsodium REQUIRED IMPORTED_TARGET libsodium)
 pkg_check_modules(gtkmm REQUIRED IMPORTED_TARGET gtkmm-4.0 libcryptopp)
 
 include(FetchContent)

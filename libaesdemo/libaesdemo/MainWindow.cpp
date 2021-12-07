@@ -7,11 +7,15 @@
 namespace aesdemo {
 
     void MainWindow::ShowError(std::string title, std::string message) {
-        auto flags = GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL;
+        auto titleWidget = Gtk::make_managed<Gtk::Label>("Fehler");
+        mAboutHeaderBar.set_title_widget(*titleWidget);
+
         mErrorDialog.set_message(title);
         mErrorDialog.set_secondary_text(message);
         mErrorDialog.set_hide_on_close(true);
         mErrorDialog.set_modal();
+        mErrorDialog.set_transient_for(*this);
+        mErrorDialog.set_titlebar(mAboutHeaderBar);
         mErrorDialog.signal_response().connect(
                 sigc::hide(sigc::mem_fun(mErrorDialog, &Gtk::Widget::hide)));
         mErrorDialog.show();
@@ -21,6 +25,10 @@ namespace aesdemo {
 
     MainWindow::MainWindow(const Glib::RefPtr<Gtk::Application> &app)
             : Gtk::ApplicationWindow(app)
+            , mHeaderBar()
+            , mDialogAbout()
+            , mAboutHeaderBar()
+            , mBtnAbout()
             , mErrorDialog(*this, "")
             , mBtnBox(Gtk::Orientation::HORIZONTAL, 10)
             , mBtnEncrypt("Verschlüsseln")
@@ -36,8 +44,25 @@ namespace aesdemo {
             , mTitle("AES Demo")
             , mSubTitle("Dieses Demo Programm demonstriert Ihnen wie AES funktioniert.")
             , mGrid() {
-        set_default_size(640, 480);
-        set_title("AESDemo");
+        set_default_size(600, 480);
+        set_title("AES Demo");
+
+        // Header bar & About
+        auto texture = Gdk::Texture::create_from_resource("/img/icon.png");
+        mDialogAbout.set_logo(texture);
+        mDialogAbout.set_program_name("AESDemo");
+        mDialogAbout.set_authors(std::vector<Glib::ustring> { "Nicolas Klier <klier.nicolas@protonmail.com>" });
+        mDialogAbout.set_comments("Dieses Demo Programm demonstriert Ihnen wie AES funktioniert. Es dient als Eigenanteil meiner Belegarbeit über AES.");
+        mDialogAbout.set_version("1.0");
+        mDialogAbout.set_transient_for(*this);
+        mDialogAbout.set_license_type(Gtk::License::MIT_X11);
+        mDialogAbout.set_website("https://github.com/mondei1/AESDemo");
+        mDialogAbout.set_hide_on_close();
+        mDialogAbout.set_modal();
+
+        mBtnAbout.set_icon_name("help-about");
+        mHeaderBar.pack_start(mBtnAbout);
+        set_titlebar(reinterpret_cast<Widget &>(mHeaderBar));
 
         //
         // Events
@@ -46,6 +71,7 @@ namespace aesdemo {
         mBtnDecrypt.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::OnDecrypt));
         mBtnClear.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::OnClickClear));
         mRandomize.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::OnRandomize));
+        mBtnAbout.signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::OnAboutClick));
 
         // mBtnClear
         Glib::RefPtr<Gtk::CssProvider> cssProvider = Gtk::CssProvider::create();
@@ -64,8 +90,7 @@ namespace aesdemo {
 
         auto *titleOptions = new Cairo::FontOptions();
         mTitle.set_font_options(*titleOptions);
-        mTitle.set_size_request(32, 32);
-        mTitle.set_markup("<b>AES Demo</b>");
+        mTitle.set_markup("<span size='30000'>AES Demo</span>");
 
         mInput.set_placeholder_text("Eingabe");
         mPassphrase.set_show_peek_icon(true);
@@ -190,5 +215,10 @@ namespace aesdemo {
             mGrid.remove(mPassphrase);
             mGrid.attach(mPassphrase, 0, 3, 2);
         }
+    }
+
+    void MainWindow::OnAboutClick() {
+        mDialogAbout.show();
+        mDialogAbout.present();
     }
 }

@@ -17,6 +17,7 @@
 #include <gtkmm/dropdown.h>
 #include <gtkmm/checkbutton.h>
 #include <gtkmm/dialog.h>
+#include <gtkmm/aboutdialog.h>
 
 #include "Crypto.hpp"
 
@@ -34,9 +35,13 @@ namespace aesdemo {
         void OnRandomize();
         void OnClickClear();
         void OnDropdownSelect();
+        void OnAboutClick();
 
-        int clickCount;
         Crypto::ModeOfOperation mode;
+
+        Gtk::Button mBtnAbout;
+        Gtk::AboutDialog mDialogAbout;
+        Gtk::HeaderBar mHeaderBar, mAboutHeaderBar;
 
         // Child widgets:
         Gtk::Grid mGrid;

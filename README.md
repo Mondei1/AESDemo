@@ -3,7 +3,7 @@
 
 Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die funktionsweise von AES.
 
-![Screenshot of AESDemo](https://github.com/Mondei1/AESDemo/tree/main/img/screenshot.png?raw=true)
+![Screenshot of AESDemo](https://raw.githubusercontent.com/Mondei1/AESDemo/main/aesdemo/img/screenshot.png)
 
 ## Bibliotheken
 * [Crypto++](https://cryptopp.com/) - Eine sehr umfassende Kryptografie Bibliothek. Von ihr verwende ich Funktionen
