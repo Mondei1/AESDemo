@@ -1,5 +1,5 @@
-# AESDemo
-**— The following are instructions in german for my research paper about the AES. —**
+<h1 align="center">AESDemo</h1>
+<p align="center">— The following are instructions in german for my research paper about the AES. —</p>
 
 Dieses Programm dient als Eigenanteil für meine Belegarbeit und demonstriert die funktionsweise von AES.
 
